@@ -28,9 +28,10 @@ module.exports = function(initialGroup, groupSize, intersectionsSize, getTable, 
     function asyncLoop() {
         getTable(function(err, table) {
             if (err) return callback(err);
-            if (table.length == 0) return callback("no valid intersections found", group, intersections);
+            if (table.length == 0) return callback(null, group, intersections, true);
             var i = 0;
 
+            // TODO shuffle table first, so results are always different if run with same seed
             while (i < table.length) {
                 var next = table[i++];
 

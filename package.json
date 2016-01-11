@@ -1,0 +1,25 @@
+{
+  "name": "async-intersect",
+  "version": "1.0.0",
+  "description": "check if multiple arrays intersect, asynchronously",
+  "main": "intersections.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlom/async-intersect.git"
+  },
+  "keywords": [
+    "array",
+    "intersect",
+    "async",
+    "asynchronous"
+  ],
+  "author": "Mark Old",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dlom/async-intersect/issues"
+  },
+  "homepage": "https://github.com/dlom/async-intersect#readme"
+}

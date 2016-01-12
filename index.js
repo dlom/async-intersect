@@ -5,7 +5,17 @@ var intersect = function(a, b) {
     });
 };
 
+var noop = function(callback) {
+    callback(null, []);
+};
+
 module.exports = function(initialGroup, groupSize, intersectionsSize, getTable, callback) {
+    if (callback == null) {
+        callback = getTable;
+        getTable = null;
+    }
+    if (getTable == null) getTable = noop;
+
     if (initialGroup.length < 1) return callback(new Error("initialGroup must have at least 1 set of data"));
     if (groupSize < 2) return callback(new Error("groupSize must be at least 2"));
     if (intersectionsSize < 1) return callback(new Error("intersectionsSize must be at least 1"));
